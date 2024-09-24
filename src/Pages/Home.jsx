@@ -63,7 +63,7 @@ const Home = () => {
 
       <section className="section db" style={{ backgroundColor: "white" }}>
         <div className="container">
-          <h1 style={{ color: "white", textAlign: "center", marginBottom: "85px", color: "#3F497F" }}>Unrivalled Track Record of Success Since 1994</h1>
+          <h1 style={{ textAlign: "center", marginBottom: "85px", color: "#3F497F" }}>Unrivalled Track Record of Success Since 1994</h1>
           <div className="row">
             {/* First Column */}
             <div className="col-lg-3 col-md-3">
