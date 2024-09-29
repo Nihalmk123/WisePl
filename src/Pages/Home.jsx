@@ -14,20 +14,7 @@ import { MDBModal, MDBModalBody, MDBModalContent, MDBModalDialog, MDBModalHeader
 
 const Home = () => {
 
-  const [modalOpen, setModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
-
-  // Function to open modal with selected image
-  const openModal = (image) => {
-    setSelectedImage(image);
-    setModalOpen(true);
-  };
-
-  // Function to close modal
-  const closeModal = () => {
-    setModalOpen(false);
-    setSelectedImage(null);
-  };
+  
 
   return (
     <Layout>
@@ -44,12 +31,12 @@ const Home = () => {
           <div className="home-message">
             <p><span style={{ color: "#F7C04A" }}>Wise</span> <span style={{ color: "#fff" }}>PL</span> <span style={{ color: "#F7C04A" }}></span></p>
             <small>
-            Unlock your full potential with personalized learning designed for your success. At WisePl, we empower minds through innovative education, shaping brighter futures one student at a time. Discover the path to excellence with us!
+              Unlock your full potential with personalized learning designed for your success. At WisePl, we empower minds through innovative education, shaping brighter futures one student at a time. Discover the path to excellence with us!
             </small>
             <div className="btn-wrapper">
               <div className="text-center">
-                <a href="#" className="btn wow slideInLeft" style={{ backgroundColor: "#3F497F", border: "none" }}>Read More</a> &nbsp;&nbsp;&nbsp;
-                <a href="#" className="btn wow slideInRight" style={{ backgroundColor: "#F7C04A", border: "none" }}>Buy Now</a>
+                <a href="#" className="btn wow slideInLeft" style={{ backgroundColor: "#3F497F", border: "none"}}>Read More</a> &nbsp;&nbsp;&nbsp;
+                {/* <a href="#" className="btn wow slideInRight" style={{ backgroundColor: "#F7C04A", border: "none" }}>Buy Now</a> */}
               </div>
             </div>
           </div>
@@ -68,29 +55,30 @@ const Home = () => {
             {/* First Column */}
             <div className="col-lg-3 col-md-3">
               <div className="stat-count">
-                <h4 className="stat-timer" style={{ textAlign: "center", color: "#F7C04A" }}>1230</h4>
-                <h3 style={{ color: "#000" }} ><i className="flaticon-black-graduation-cap-tool-of-university-student-for-head" style={{ color: "#000" }} /> Happy Students</h3>
+                <h4 className="stat-timer" style={{ textAlign: "center", color: "#F7C04A" }}>50k+</h4>
+                <h3 style={{ color: "#000",textAlign: "center", }} > Peete Lim's Physical Book Sold World wide</h3>
               </div>
             </div>
             {/* Second Column */}
             <div className="col-lg-3 col-md-3">
               <div className="stat-count">
-                <h4 className="stat-timer" style={{ textAlign: "center", color: "#F7C04A" }}>331</h4>
-                <h3 style={{ color: "#000" }} ><i className="flaticon-online-course" style={{ color: "#000" }} /> Course Done</h3>
+                <h4 className="stat-timer" style={{ textAlign: "center", color: "#F7C04A" }}>20k+</h4>
+                <h3 style={{ color: "#000", textAlign: "center", }} >Students that went through PL Education Centre programs</h3>
               </div>
             </div>
             {/* Third Column */}
             <div className="col-lg-3 col-md-3">
               <div className="stat-count">
-                <h4 className="stat-timer" style={{ textAlign: "center", color: "#F7C04A" }}>8901</h4>
-                <h3 style={{ color: "#000" }} ><i className="flaticon-coffee-cup" style={{ color: "#000" }} />Book published</h3>
+                <h4 className="stat-timer" style={{ textAlign: "center", color: "#F7C04A" }}>6 yrs</h4>
+                <h3 style={{ color: "#000", textAlign: "center", }} > students who stayed (from Secondary 1 to JC2),
+                (Primary 1 to 6)</h3>
               </div>
             </div>
             {/* Fourth Column */}
             <div className="col-lg-3 col-md-3">
               <div className="stat-count">
-                <h4 className="stat-timer" style={{ textAlign: "center", color: "#F7C04A" }}>901</h4>
-                <h3 style={{ color: "#000" }}><i className="flaticon-coffee-cup" style={{ color: "#000" }} /> Total sales</h3>
+                <h4 className="stat-timer" style={{ textAlign: "center", color: "#F7C04A" }}>90k+</h4>
+                <h3 style={{ color: "#000", textAlign: "center", }}> Total Stundents and counting</h3>
               </div>
             </div>
           </div>
@@ -98,54 +86,47 @@ const Home = () => {
       </section>
 
       <div className="card-container">
-        <div className="section-title text-center">
-          <h3 style={{ color: "#3F497F" }}>Explore Our Programmes</h3>
-          <p>
-            Maecenas sit amet tristique turpis. Quisque porttitor eros quis leo pulvinar, at hendrerit sapien iaculis. Donec consectetur accumsan arcu, sit amet fringilla ex ultricies.
-          </p>
-          <a href="#" className="btn btn_border border_radius" style={{ marginTop: "25px", backgroundColor: "#3F497F", border: "none" }}>Learn more...</a>
-        </div>
+  <div className="section-title text-center">
+    <h3 style={{ color: "#3F497F" }}>Explore Our Programmes</h3>
+    <p>
+    We offer *tuition and enrichment programs* in Physics, Chemistry, Mathematics (A&E), and English for secondary school students. 
 
-        <div className="row g-4"> {/* `g-4` adds a gap between columns */}
-          {/* First Column */}
-          <div className="col-md-6">
-            <div className="card text-center border shadow-sm border_radius card-bg" style={{ backgroundImage: `url(${phy})` }}>
-              <div className="card-body">
-                {/* <h5 className="card-title">Special title treatment 1</h5>
-                <p className="card-text">With supporting text below as a natural lead-in to additional content..</p> */}
-              </div>
-            </div>
-          </div>
+For upper primary students, we provide *hands-on demonstrations and science enrichment programs* to foster a deeper understanding and love for learning. 
 
-          <div className="col-md-6">
-            <div className="card text-center border shadow-sm border_radius card-bg" style={{ backgroundImage: `url(${chem})` }}>
-              <div className="card-body">
-              </div>
-            </div>
-          </div>
+Join us to enhance your academic performance and explore the exciting world of science and language!
+    </p>
+    <a href="#" className="btn btn_border border_radius" style={{ marginTop: "25px", backgroundColor: "#3F497F", border: "none" }}>Learn more...</a>
+  </div>
 
-
-          {/* Second Column */}
-
-          <div className="col-md-6">
-            <div className="card text-center border shadow-sm border_radius card-bg" style={{ backgroundImage: `url(${math})` }}>
-              <div className="card-body">
-                {/* <h5 className="card-title">Special title treatment 1</h5> */}
-                {/* <p className="card-text">With supporting text below as a natural lead-in to additional content..</p> */}
-              </div>
-            </div>
-          </div>
-
-          <div className="col-md-6">
-            <div className="card text-center border shadow-sm border_radius card-bg" style={{ backgroundImage: `url(${eng})` }}>
-              <div className="card-body">
-                {/* <h5 className="card-title">Special title treatment 1</h5>
-                <p className="card-text">With supporting text below as a natural lead-in to additional content..</p> */}
-              </div>
-            </div>
-          </div>
-        </div>
+  <div className="row g-4">
+    {/* First Column */}
+    <div className="col-12 col-md-6">
+      <div className="card text-center border shadow-sm border_radius card-bg" style={{ backgroundImage: `url(${phy})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '200px', padding:'0px' }}>
+        <div className="card-body"></div>
       </div>
+    </div>
+
+    <div className="col-12 col-md-6">
+      <div className="card text-center border shadow-sm border_radius card-bg" style={{ backgroundImage: `url(${chem})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '200px' }}>
+        <div className="card-body"></div>
+      </div>
+    </div>
+
+    {/* Second Column */}
+    <div className="col-12 col-md-6">
+      <div className="card text-center border shadow-sm border_radius card-bg" style={{ backgroundImage: `url(${math})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '200px' }}>
+        <div className="card-body"></div>
+      </div>
+    </div>
+
+    <div className="col-12 col-md-6">
+      <div className="card text-center border shadow-sm border_radius card-bg" style={{ backgroundImage: `url(${eng})`, backgroundSize: 'cover', backgroundPosition: 'center', height: '200px' }}>
+        <div className="card-body"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       {/* About Us Section */}
       <section className="about-us" style={{ padding: '40px 0', backgroundColor: '#f9f9f9' }}>
@@ -155,13 +136,13 @@ const Home = () => {
               <img src={about_us} alt="About Us" style={{ width: '100%', borderRadius: '5px', boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.2)' }} />
             </div>
             <div className="col-md-6">
-              <h2 className="slideInLeft wow" style={{color:"#3F497F"}}>About Us</h2>
+              <h2 className="slideInLeft wow" style={{ color: "#3F497F" }}>About Us</h2>
               <p>
                 We are committed to providing quality education through innovative programs that cater to the needs of today's learners. Our aim is to empower students with the knowledge and skills they need to succeed.
                 We are committed to providing quality education through innovative programs that cater to the needs of today's learners. Our aim is to empower students with the knowledge and skills they need to succeed.
                 We are committed to providing
               </p>
-              <Link to="/aboutus" className="btn wow slideInLeft" style={{ backgroundColor: "#3F497F", border: "none" }}>Learn More</Link> &nbsp;&nbsp;&nbsp;
+              <Link to="/aboutus" className="btn wow slideInLeft" style={{ backgroundColor: "#3F497F", border: "none", marginTop:'20px' }}>Learn More</Link> &nbsp;&nbsp;&nbsp;
             </div>
           </div>
         </div>
@@ -172,11 +153,11 @@ const Home = () => {
         <div className="container">
           <div className="row d-flex align-items-center">
             <div className="col-md-6">
-              <h2 className="slideInLeft wow" style={{color:"#3F497F"}}>Who We Are</h2>
+              <h2 className="slideInLeft wow" style={{ color: "#3F497F" }}>Why Choose Us</h2>
               <p>
-                Our team consists of experienced educators, innovators, and professionals who share a passion for making education accessible to all. Together, we work towards creating a learning environment that is inclusive, engaging, and impactful.
+              WISE PL is probably most well-equipped with Science teaching aids, apparatus and gadgets to enhance learning. Its fees are reasonable and very affordable.
               </p>
-              <Link to="/aboutus" className="btn wow slideInLeft" style={{ backgroundColor: "#3F497F", border: "none" }}>Learn More</Link> &nbsp;&nbsp;&nbsp;
+              <Link to="/aboutus" className="btn wow slideInLeft" style={{ backgroundColor: "#3F497F", border: "none", marginBottom:'25px', marginTop:'20px' }}>Learn More</Link> &nbsp;&nbsp;&nbsp;
             </div>
             <div className="col-md-6">
               <img src={who_we_are} alt="Who We Are" style={{ width: '100%', borderRadius: '5px', boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.2)' }} />
@@ -226,62 +207,49 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </section>      
+      </section>
 
-      <h1 style={{textAlign:"center"}}>Follow us on Instagram: @yourinstagam_handle</h1>
-      <div className="container" style={{ marginTop: "50px", marginBottom: "50px" }}>
-        <div className="row">
-          <div className="col-md-3">
-            <img 
-              src={temp1} 
-              alt="temp1" 
-              style={{ width: "90%", cursor: "pointer" }} 
-              onClick={() => openModal(temp1)}
-            />
-          </div>
-          <div className="col-md-3">
-            <img 
-              src={temp2} 
-              alt="temp2" 
-              style={{ width: "90%", cursor: "pointer" }} 
-              onClick={() => openModal(temp2)}
-            />
-          </div>
-          <div className="col-md-3">
-            <img 
-              src={temp2} 
-              alt="temp2" 
-              style={{ width: "90%", cursor: "pointer" }} 
-              onClick={() => openModal(temp2)}
-            />
-          </div>
-          <div className="col-md-3">
-            <img 
-              src={temp2} 
-              alt="temp2" 
-              style={{ width: "90%", cursor: "pointer" }} 
-              onClick={() => openModal(temp2)}
-            />
-          </div>
-        </div>
-      </div>
+      <h1 style={{ textAlign: "center" }}>Follow us on Instagram: @yourinstagam_handle</h1>
+<div className="container" style={{ marginTop: "50px", marginBottom: "50px" }}>
+  <div className="row">
+    <div className="col-6 col-md-3 mb-4">
+      <img
+        src={temp1}
+        alt="temp1"
+        className="img-fluid mobile-img"
+        style={{ cursor: "pointer", width: '80%' }}
+      />
+    </div>
+    <div className="col-6 col-md-3 mb-4">
+      <img
+        src={temp2}
+        alt="temp2"
+        className="img-fluid mobile-img"
+        style={{ cursor: "pointer", width: '80%' }}
+      />
+    </div>
+    <div className="col-6 col-md-3 mb-4">
+      <img
+        src={temp2}
+        alt="temp2"
+        className="img-fluid mobile-img"
+        style={{ cursor: "pointer", width: '80%' }}
+      />
+    </div>
+    <div className="col-6 col-md-3 mb-4">
+      <img
+        src={temp2}
+        alt="temp2"
+        className="img-fluid mobile-img"
+        style={{ cursor: "pointer", width: '80%' }}
+      />
+    </div>
+  </div>
+</div>
 
-      {/* Modal to show selected image */}
-      <MDBModal show={modalOpen} setShow={setModalOpen} tabIndex="-1">
-        <MDBModalDialog>
-          <MDBModalContent>
-            <MDBModalHeader>
-              <button type="button" className="btn-close" aria-label="Close" onClick={closeModal}></button>
-            </MDBModalHeader>
-            <MDBModalBody>
-              {selectedImage && <img src={selectedImage} alt="Selected" style={{ width: '100%' }} />}
-            </MDBModalBody>
-            <MDBModalFooter>
-              <button className="btn btn-secondary" onClick={closeModal}>Close</button>
-            </MDBModalFooter>
-          </MDBModalContent>
-        </MDBModalDialog>
-      </MDBModal>
+
+
+      
 
 
       {/* Newsletter Section */}
@@ -290,10 +258,10 @@ const Home = () => {
           <h3 style={{ color: "#3F497F" }}>Subscribe to our Newsletter</h3>
           <p style={{ color: "#000" }}>Stay updated with the latest news, courses, and special offers.</p>
           <form onSubmit={''} className="newsletter-form" style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-            <input 
-              type="email" 
-              placeholder="Enter your email"  
-              required 
+            <input
+              type="email"
+              placeholder="Enter your email"
+              required
               style={{ padding: '10px', width: '300px', borderRadius: '5px', border: '1px solid #3F497F' }}
             />
             <button type="submit" style={{ padding: '10px 20px', marginLeft: '10px', backgroundColor: '#3F497F', color: '#fff', border: 'none', borderRadius: '5px' }}>

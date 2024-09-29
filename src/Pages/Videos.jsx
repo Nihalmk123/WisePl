@@ -18,10 +18,10 @@ const Videos = () => {
     <Layout>
       <section
         style={{
-          padding: '130px 0',
+          padding: '180px 0',
           background: "#3F497F",
           color: '#fff',
-          textAlign: 'center',
+          textAlign: 'center', // Keep section title and description center aligned
         }}
       >
         <MDBContainer>
@@ -38,10 +38,10 @@ const Videos = () => {
 
       <div className="videos-section" style={{ padding: "25px" }}>
         <MDBContainer>
-          <MDBRow>
+          <MDBRow className="j">
             {videoUrls.map((videoUrl, index) => (
-              <MDBCol key={index} md="6" lg="4" className="mb-4">
-                <div style={{ borderRadius: '15px', overflow: 'hidden' }}>
+              <MDBCol key={index} md="6" className="mb-4 d-flex justify-content-center align-items-center">
+                <div style={{ borderRadius: '15px', overflow: 'hidden', maxWidth: '100%' }}>
                   <Plyr
                     source={{
                       type: 'video',
@@ -54,23 +54,25 @@ const Videos = () => {
                     }}
                   />
                 </div>
-                <h4 style={{ marginTop: "10px" }}>Video Title:</h4>
-                <p>Video Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae accusantium in saepe nesciunt autem neque?</p>
+                {/* Left-align video title and description */}
+                <div style={{ textAlign: 'left', marginTop: '10px' }}> 
+                  <h4>Video Title:</h4>
+                  <p>Video Description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae accusantium in saepe nesciunt autem neque?</p>
+                </div>
               </MDBCol>
             ))}
           </MDBRow>
         </MDBContainer>
       </div>
-
       <section className="newsletter-section" style={{ backgroundColor: "#F7C04A", padding: "40px 0" }}>
         <div className="container text-center">
           <h3 style={{ color: "#3F497F" }}>Subscribe to our Newsletter</h3>
           <p style={{ color: "#000" }}>Stay updated with the latest news, courses, and special offers.</p>
           <form onSubmit={''} className="newsletter-form" style={{ display: 'flex', justifyContent: 'center', marginTop: '20px' }}>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              required
+            <input 
+              type="email" 
+              placeholder="Enter your email"  
+              required 
               style={{ padding: '10px', width: '300px', borderRadius: '5px', border: '1px solid #3F497F' }}
             />
             <button type="submit" style={{ padding: '10px 20px', marginLeft: '10px', backgroundColor: '#3F497F', color: '#fff', border: 'none', borderRadius: '5px' }}>
@@ -84,18 +86,3 @@ const Videos = () => {
 };
 
 export default Videos;
-
-// controls: [
-//   'play-large', // The large play button in the center
-//   'play', // Play/Pause button
-//   'progress', // Progress bar
-//   'current-time', // Current time indicator
-//   'duration', // Total duration indicator
-//   'mute', // Mute/Unmute button
-//   'volume', // Volume control
-//   'captions', // Closed captions
-//   'settings', // Settings menu (for captions, quality, etc.)
-//   'pip', // Picture-in-picture mode
-//   'airplay', // AirPlay (for Apple devices)
-//   'fullscreen', // Fullscreen button
-// ]

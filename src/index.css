@@ -172,4 +172,121 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#9BAFD9", en
 
 }
 
+/* icons */
+.social {
+  display: flex; /* Aligns items in a row */
+  gap: 10px; /* Space between icons */
+}
+
+.social a {
+  color: #fff; /* Set icon color */
+  font-size: 14px; /* Adjust size as needed */
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.social a:hover {
+  color: #F7C04A; /* Change color on hover */
+}
+
+/* header css nav*/
+.header {
+  position: absolute; /* Keep it absolute initially */
+  z-index: 111;
+  left: 0;
+  top: 0;
+  right: 0;
+  padding: 0;
+  background-color: transparent; /* Change as per your design */
+  transition: all 0.3s ease-in-out; /* Smooth transition */
+}
+
+.header.fixed {
+  position: fixed; /* Make it fixed */
+  top: 0; /* Align to the top */
+  background-color: #000; /* Change background when fixed */
+  padding: 10px 0; /* Adjust padding as needed */
+  z-index: 100; /* Ensure it's above other content */
+}
+
+.header.fixed .topbar {
+  visibility: hidden; /* Hide topbar when fixed */
+  opacity: 0; /* Fade out */
+  display: none; /* Remove from layout */
+}
+
+.navbar-default {
+  background-color: transparent; /* Initial transparent background */
+}
+
+.header.fixed .navbar-default {
+  background-color: #000; /* Background color when fixed */
+}
+
+.navbar-default .nav>li>a {
+  color: #fff !important; /* Text color when navbar is fixed */
+}
+
+/* Mobile responsiveness navbar */
+@media (max-width: 768px) {
+  .header {
+      background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+  }
+  
+  .navbar-toggle {
+      border-color: #fff; /* Change toggle button color */
+  }
+  @media (max-width: 768px) {
+  .mobile-img {
+    width: 100% !important; /* Make the image full width on mobile */
+  }
+}
+
+  .navbar-default .nav > li > a {
+      color: #fff; /* Change text color for links */
+      font-size: 14px; /* Adjust font size */
+  }
+
+  .social a {
+      margin-left: 10px; /* Adjust margin for social icons */
+  }
+  
+  .topbar p {
+      font-size: 12px; /* Smaller font size for topbar text */
+  }
+
+  .header.fixed .topbar {
+      display: none; /* Hide topbar when fixed */
+  }
+
+  .navbar-default {
+      border: none; /* Remove border for mobile */
+  }
+
+  .navbar-default .nav > li {
+      float: none; /* Stack items vertically */
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-img {
+    width: 60% !important; 
+    margin-left: 70px;
+    margin-top: 30px;
+  }
+}
+
+.slick-dots {
+  margin-bottom: 30px; /* This adds space below the dots */
+}
+.slick-dots {
+  margin-bottom: 20px; /* Adjust the value to control the distance */
+}
+
+
+
+
+
+
+
+
 

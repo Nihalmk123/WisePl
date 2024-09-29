@@ -6,6 +6,10 @@ import peter from '../assets/peeter.jpeg';
 import wisepl34 from '../assets/wisepl34.jpeg';
 import emot from '../assets/Mommy and Me Classes.png';
 import emot1 from '../assets/Training.png';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Slider from "react-slick";
+
 
 import ex1 from '../assets/exp1 (1).jpeg';
 import ex2 from '../assets/exp2 (2).jpeg';
@@ -16,6 +20,33 @@ import ex6 from '../assets/exp6 (6).jpeg';
 import ex7 from '../assets/exp7 (7).jpeg';
 
 const AboutUs = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2, // For desktop, showing 2 images
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 768, // For mobile, showing 1 image
+        settings: {
+          slidesToShow: 1,
+        },
+      },
+    ],
+  };
+
+  const imageStyle = {
+    padding: "10px", // Gap between images
+    width: "100%", // Ensures image fills the container
+    height: "300px", // Sets a fixed height for all images
+    objectFit: "cover", // Maintains aspect ratio and covers the container
+    borderRadius: "18px", // Optional: to round the image corners
+    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Optional: for a slight shadow effect
+    marginBottom:"20px"
+
+  };
+  
   return (
     <Layout>
       <div id="wrapper">
@@ -202,39 +233,33 @@ const AboutUs = () => {
           </div>
         </section>
       </div>
-      <h1 className='text-center'>Expriments</h1>
+
       <div className="container">
-        <div className="right-column">
-          <div className="accordian">
-            <ul>
-              <li>
-                <img src={ex1} alt="" />
-              </li>
-              <li>
-                <img src={ex2} alt="" style={{ height: "400px", width: "100%" }} />
-              </li>
-              <li>
-                <img src={ex3} alt="" />
-              </li>
-              <li>
-                <img src={ex4} alt="" style={{ height: "400px", width: "100%" }} />
-              </li>
-              <li>
-                <img src={ex5} alt="" />
-              </li>
-              <li>
-                <img src={ex6} alt="" />
-              </li>
-              <li>
-                <img src={ex7} alt="" />
-              </li>
-              <li>
-                <img src={ex7} alt="" />
-              </li>
-            </ul>
-          </div>
+      <h1 className="text-center">Experiments</h1>
+      <Slider {...settings}>
+        <div className="carousel-item">
+          <img src={ex1} alt="Experiment 1" style={imageStyle} />
         </div>
-      </div>
+        <div className="carousel-item">
+          <img src={ex2} alt="Experiment 2" style={imageStyle} />
+        </div>
+        <div className="carousel-item">
+          <img src={ex3} alt="Experiment 3" style={imageStyle} />
+        </div>
+        <div className="carousel-item">
+          <img src={ex4} alt="Experiment 4" style={imageStyle} />
+        </div>
+        <div className="carousel-item">
+          <img src={ex5} alt="Experiment 5" style={imageStyle} />
+        </div>
+        <div className="carousel-item">
+          <img src={ex6} alt="Experiment 6" style={imageStyle} />
+        </div>
+        <div className="carousel-item">
+          <img src={ex7} alt="Experiment 7" style={imageStyle} />
+        </div>
+      </Slider>
+    </div>
 
 
       {/* Newsletter Section */}

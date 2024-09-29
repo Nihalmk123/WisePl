@@ -60,7 +60,7 @@ const Programs = () => {
                           ))}
                         </ul>
                       </MDBCardText>
-                      <p style={{ color: 'black', fontWeight: 'bolder' }}>Price: $25</p>
+                      {/* <p style={{ color: 'black', fontWeight: 'bolder' }}>Price: $25</p> */}
                     </MDBCardBody>
                   </MDBCard>
                 </MDBCol>
@@ -68,18 +68,34 @@ const Programs = () => {
             </MDBRow>
 
             {/* Why Choose Us Section */}
-            <MDBRow className="mt-5">
-              <MDBCol md="12">
-                <h2 className='text-center'>Why Choose Us?</h2>
-                <p>
-                  <strong>Well-Equipped Facilities:</strong> We are equipped with state-of-the-art science teaching aids, apparatus, and gadgets to enhance the learning experience.
-                </p>
-                <p>
-                  <strong>Affordable Fees:</strong> Our programs are designed to be accessible, ensuring quality education at reasonable rates.
-                </p>
-                <p>At WISE PL, our mission is to provide exceptional educational support that empowers students to achieve their full potential. Join us and experience a learning environment dedicated to academic excellence.</p>
-              </MDBCol>
-            </MDBRow>
+            {/* Why Choose Us Section */}
+<MDBRow className="mt-5">
+  <MDBCol md="12">
+    <h2 className='text-center'>Why Choose Us?</h2>
+    <MDBRow className="mt-4" style={{ justifyContent: 'center' }}>
+      <MDBCol md="3" className="text-center">
+        <i className="fas fa-tools fa-3x" style={{ borderRadius: '50%', padding: '20px', background: '#3F497F', color: '#fff' }} title="Well-Equipped Facilities"></i>
+        <p style={{ fontWeight: 'bold' }}>Well-Equipped Facilities</p>
+      </MDBCol>
+      <MDBCol md="3" className="text-center">
+        <i className="fas fa-dollar-sign fa-3x" style={{ borderRadius: '50%', padding: '20px', background: '#3F497F', color: '#fff' }} title="Affordable Fees"></i>
+        <p style={{ fontWeight: 'bold' }}>Affordable Fees</p>
+      </MDBCol>
+      <MDBCol md="3" className="text-center">
+        <i className="fas fa-book-open fa-3x" style={{ borderRadius: '50%', padding: '20px', background: '#3F497F', color: '#fff' }} title="Quality Education"></i>
+        <p style={{ fontWeight: 'bold' }}>Quality Education</p>
+      </MDBCol>
+      <MDBCol md="3" className="text-center">
+        <i className="fas fa-comments fa-3x" style={{ borderRadius: '50%', padding: '20px', background: '#3F497F', color: '#fff' }} title="Supportive Community"></i>
+        <p style={{ fontWeight: 'bold' }}>Supportive Community</p>
+      </MDBCol>
+    </MDBRow>
+    <p className="mt-4">
+      At WISE PL, our mission is to provide exceptional educational support that empowers students to achieve their full potential. Join us and experience a learning environment dedicated to academic excellence.
+    </p>
+  </MDBCol>
+</MDBRow>
+
           </MDBContainer>
         </section>
         
